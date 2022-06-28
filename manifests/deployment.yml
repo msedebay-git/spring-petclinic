@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: msedebaygitspringpetclinic 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: msedebaygitspringpetclinic
+  template:
+    metadata:
+      labels:
+        app: msedebaygitspringpetclinic 
+    spec:
+      containers:
+        - name: msedebaygitspringpetclinic 
+          image: talentnetwork123.azurecr.io/msedebaygitspringpetclinic
+          ports:
+          - containerPort: 8080
